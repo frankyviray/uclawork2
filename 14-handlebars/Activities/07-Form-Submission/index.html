@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form Submission Examples</title>
+</head>
+<body>
+	<!-- the act of submitting a form also takes the client/user to the URL specified as the "action" -->
+
+	<form method="POST" action="http://www.google.com">
+		<h2>Form #1 posts to google.com</h2>
+		<input type="text" name="email" placeholder="Email" />
+		<button>Submit</button>
+	</form>
+
+	<hr/>
+
+	<form method="POST" action="/do">
+		<h2>Form #2 posts to localhost:3000/do</h2>
+		<input type="text" name="email" placeholder="Email" />
+		<button>Submit</button>
+	</form>
+</body>
+</html>

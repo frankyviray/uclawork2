@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Magical Schools</title>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+	<h1> Magical Schools </h1>
+
+	<ul id="placeholder">
+
+	</ul>
+
+	<script>
+		// the front-end can request the data via ajax and then display it, but the problem with this approach is that it 1) makes another unnecessary http request and 2) means the content isn't accessible to search engines
+		$.get("/api", function(data) {
+			var html = "";
+
+			for (var i = 0; i < data.length; i++) {
+			  html += "<li><p> ID: " + data[i].id + "</p>";
+			  html += "<p>School: " + data[i].name + " </p></li>";
+			}
+
+			html += "</ul>";
+
+			$("#placeholder").html(html);
+		});
+	</script>
+</body>
+</html>

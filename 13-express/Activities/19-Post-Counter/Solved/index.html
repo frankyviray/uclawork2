@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Post Counter</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="text-center">
+			<h1>Click the button, please</h1>
+
+			<button id="clicker" class="btn btn-primary">Clicky Clicky</button>
+		</div>
+	</div>
+
+	<script>
+		$('#clicker').click(function() {
+			// we can simplify this POST request, since we're not actually sending any data with it and don't need to do anything with the callback. but because the purpose of this request is to change data on the server, a POST makes more sense than a GET.
+			$.post("/count");
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Big Wheels</title>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<h1>Check out my big wheels</h1>
+
+	<!-- this line works when the file is viewed from your OS's file system, because it's able to see nearby folders -->
+	<img src="assets/big-wheel-300px.png" alt="local file" />
+
+	<!-- this line works when the file is viewed from localhost, because we told express to make everything INSIDE the "assets" folder publicly available at the root. so... no need to write "assets/" anymore -->
+	<img src="big-wheel-300px.png" alt="server file" />
+</body>
+</html>

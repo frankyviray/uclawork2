@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RESTful APIs</title>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+	<button id="post">POST</button>
+	<button id="put">PUT</button>
+	<button id="delete">DELETE</button>
+
+	<script>
+		// in RESTful architecture, POST requests would be used for adding new data
+		$('#post').click(function() {
+			$.ajax("/", {
+				type: "POST",
+				data: null
+			});
+		});
+
+		// PUT requests would be used for updating existing data
+		$('#put').click(function() {
+			$.ajax("/", {
+				type: "PUT",
+				data: null
+			});
+		});
+
+		// and DELETE requests would be used for... deleting data
+		$('#delete').click(function() {
+			$.ajax("/", {
+				type: "DELETE",
+				data: null
+			});
+		});
+	</script>
+
+	<!-- we have to use ajax to make the RESTful requests, because regular HTML forms only support GET and POST actions -->
+</body>
+</html>
